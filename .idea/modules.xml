@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo-Eureka/demo-Eureka.iml" filepath="$PROJECT_DIR$/demo-Eureka/demo-Eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-Gateway/demo-Gateway.iml" filepath="$PROJECT_DIR$/demo-Gateway/demo-Gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-System/demo-System.iml" filepath="$PROJECT_DIR$/demo-System/demo-System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloudDemo1.iml" filepath="$PROJECT_DIR$/springCloudDemo1.iml" />
+    </modules>
+  </component>
+</project>

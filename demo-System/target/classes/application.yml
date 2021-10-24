@@ -1,0 +1,20 @@
+server:
+  port: 8901  #端口号
+
+spring:
+  application:
+    name: demo-system    #名称
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+  discovery:
+    server-addr: 127.0.0.1:8848
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8901/eureka/
+#  instance:
+#    hostname: localhost   #host地址（名称）
+#    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${server.port}
+

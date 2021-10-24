@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: demo-gateway    #名称
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名称进行路由
+      routes:
+        - id: demo_system # 路由的id,没有规定规则但要求唯一,建议配合服务名
+        #匹配后提供服务的路由地址
+          uri: http://127.0.0.1:8903
+          predicates:
+            - Path=/**
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8901/eureka/
+#  instance:
+#    hostname: localhost   #host地址（名称）
+#    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${server.port}
+
+server:
+  port: 8902  #端口号
+  ssl:
+    enabled: true
+    key-store-password: 123456             # 腾讯云申请生成证书时填写的密码，如果申请时没有填写，name下载的证书文件家中会包括一个keystorePass.txt文件，里面就是密码
+    key-store: classpath:SSL/keystore4.p12     # 我自己进行了文件重命名
+    key-store-type: PKCS12
+    keyAlias: server
+
+http:
+  port: 8904
+
